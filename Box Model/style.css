@@ -1,0 +1,27 @@
+/* .box{
+    border: 2px solid black;
+} */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: red;
+  background-color: greenyellow;
+  height: 200px;
+  width: 200px;
+  border: 50px solid black;
+  padding: 100px;
+  margin: 20px 0px 20px 20px;
+  /* box-sizing: border-box; */
+}
+
+#butn{
+  height: 50px;
+  width: 100px;
+  background-color: olive;
+  border: 20px dashed red;
+  padding: 100px;
+  background-clip: padding-box;
+}

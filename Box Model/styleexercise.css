@@ -1,0 +1,52 @@
+/* 
+THE ONLY PROPERTIES YOU NEED:
+- display 
+- border properties
+- margin properties
+- padding properties
+- width & height
+- background-color
+- color
+- box sizing
+*/
+
+section img {
+  margin: 20px;
+  width: 300px;
+  height: 200px;
+  border-right: 4px solid #f51720;
+  padding: 5px;
+  background-color: #f8d210;
+}
+
+nav ul li {
+  display: inline;
+  margin: 5px;
+  border-right: 2px solid black;
+  padding-right: 5px;
+}
+
+.borderNone {
+  border: none;
+}
+
+form input {
+  display: block;
+  margin: 10px;
+  height: 25px;
+  width: 400px;
+}
+
+form button {
+  display: block;
+  margin: 10px;
+  height: 25px;
+  width: 408px;
+  background-color: rgb(37, 123, 221);
+  color: white;
+  border: none;
+}
+
+#input2 {
+  border-top: 5px solid black;
+}
