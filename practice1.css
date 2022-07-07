@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.items{
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    border: 2px solid red;
+    background-color: antiquewhite;
+    margin: 20px 100px;
+    font-size: 100px;
+    text-align: center;
+    line-height: 200px;
+}
+
+
