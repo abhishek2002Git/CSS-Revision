@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    font-size: clamp(1.5rem, 5vw, 4rem); /*  static dynamic static  */
+}
+
+.outer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.box{
+    height: auto;
+    min-height: 300px;
+    background: burlywood;
+    border: 3px solid red;
+
+    /* padding-top: min(100px, 2vh); */     
+    /* padding-bottom: min(100px, 2vh); */
+    /* padding-left: 2vh; */
+    /* padding-right: 2vh; */
+    padding: min(100px, 2vh) 2vh min(100px, 2vh) 2vh;
+
+    width: min(500px , 70%);
+    display: flex;
+    align-items: center;
+}
