@@ -1,5 +1,7 @@
 /***************************************************** Global Styling *******************************************************************/
 
+/* 1vw = 13.2px for desktop */
+
 *,
 *::before,
 *::after {
@@ -64,12 +66,12 @@
   margin-top: 6px;
 }
 
-
 /********************************************** home-banner styling ********************************************************************/
 
 .home-banner {
   display: flex;
   border-top: 1px solid #817d7d33;
+  padding-bottom: 30px;
 }
 
 .banner-left {
@@ -78,19 +80,20 @@
   justify-content: center;
 }
 
-.banner-right{
-  text-align:center;
+.banner-right {
+  text-align: center;
+  padding-right: 5px;
 }
 
 .banner-right h1 {
-  font-size: clamp(30px, 3.4vw, 50px);
+  font-size: clamp(30px, 3.8vw, 50px);
   font-style: "sans-serif";
   margin-top: 23px;
-  font-weight:900
+  font-weight: 900;
 }
 
 .banner-right p {
-  font-size: clamp(17px,1.4vw , 21px);
+  font-size: clamp(17px, 1.6vw, 21px);
   font-style: "domine", "sans-serif";
   padding: 0px 4vw;
   margin-top: 23px;
@@ -100,6 +103,79 @@
   margin-top: 23px;
 }
 
+.submit-btn {
+  background: #b71c1c;
+  color: #ffffff;
+  width: 205px;
+  font-size: 0.9rem;
+  padding: 0.625em 1em;
+  border: none;
+  border-radius: 2px;
+}
+
+.input-1,
+.input-2 {
+  width: 205px;
+  border-radius: 2px;
+  font-size: 0.9rem;
+  border: 2px solid black;
+  padding: 0.5em 1em;
+  margin-right: 5px;
+  margin-bottom: 10px;
+}
+
+/*********************************************  I Want To Banner ********************************************************/
+
+.i-want-to-banner {
+  background: rgb(237, 237, 237);
+  text-align: center;
+  padding-top: clamp(30px, 5.3vw, 70px);
+  padding-bottom: clamp(50px, 11.36vw, 150px);
+}
+
+.i-want-text {
+  font-size: 30px;
+  font-weight: 550;
+  font-family: sans-serif;
+  border-bottom: 2px solid black;
+  padding-bottom: 12px;
+}
+
+.img-div {
+  margin-top: 50px;
+}
+
+.left-want-to,
+.right-want-to,
+.img-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left-want-to,
+.right-want-to {
+  /*  left and right div */
+  width: 50%;
+}
+
+.left-want-to img {
+  /*  all images  */
+  height: 112px;
+  width: 112px;
+}
+
+.text-img {
+  /* all texts below all images */
+  margin-top: 20px;
+  font-size: max(20px, 1.9vw);
+  width: 20vw;
+  min-width: 120px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 10px 0px;
+}
+
+/*********************************************  media queries ********************************************************/
 @media (min-width: 922px) {
   .menu-icon {
     display: none;
@@ -107,10 +183,38 @@
   .nav-ul {
     display: flex;
   }
-  .banner-right{
-    text-align:left;
+  .banner-right {
+    text-align: left;
   }
-  .banner-right p{
+  .banner-right p {
     padding: 0px 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-banner {
+    display: block;
+  }
+}
+
+@media (max-width: 544px) {
+  .submit-btn,
+  .input-1,
+  .input-2 {
+    width: 70%;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 990px) {
+  .img-div {
+    display: block;
+  }
+  .left-want-to,
+  .right-want-to {
+    width: 100%;
+  }
+  .right-want-to {
+    margin-top: 30px;
   }
 }
