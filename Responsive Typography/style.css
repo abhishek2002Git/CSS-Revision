@@ -9,6 +9,10 @@ h1{
     font-size: clamp(1.5rem, 5vw, 4rem); /*  static dynamic static  */
 }
 
+p {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+}
+
 .outer{
     display: flex;
     flex-direction: row;

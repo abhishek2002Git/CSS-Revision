@@ -1,19 +1,14 @@
+/***************************************************** Global Styling *******************************************************************/
+
 *,
 *::before,
-::after {
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.logo{
-    margin-left: 75px;
-    margin-top: 15px;
-}
-
-#logoImg{
-    min-height: auto;
-}
+/***************************************************** Navbar Styling *******************************************************************/
 
 .navbar {
   background-color: #ffffff;
@@ -28,20 +23,94 @@
   line-height: 75px;
 }
 
-.container ul {
-  display: flex;
-  margin-right: 150px;
+.logo {
+  margin-left: 5.6vw;
+  margin-top: 15px;
 }
 
-.container ul li {
+#logoImg {
+  min-height: auto;
+}
+
+.nav-ul {
+  display: flex;
+  margin-right: 12vw;
+  display: none;
+}
+
+.nav-li {
   list-style: none;
   text-decoration: none;
   margin-right: 30px;
 }
 
-.container ul a {
+.nav-a {
   text-decoration: none;
   font-size: 12px;
   font-weight: 550;
   color: black;
+}
+
+.menu-icon {
+  margin-right: 5.6vw;
+  margin-top: 15px;
+}
+
+.div-menu-icon {
+  width: 35px;
+  height: 5px;
+  background-color: #b71c1c;
+  border-radius: 10px;
+  margin-top: 6px;
+}
+
+
+/********************************************** home-banner styling ********************************************************************/
+
+.home-banner {
+  display: flex;
+  border-top: 1px solid #817d7d33;
+}
+
+.banner-left {
+  padding: 1.24vw 8.6vw;
+  display: flex;
+  justify-content: center;
+}
+
+.banner-right{
+  text-align:center;
+}
+
+.banner-right h1 {
+  font-size: clamp(30px, 3.4vw, 50px);
+  font-style: "sans-serif";
+  margin-top: 23px;
+  font-weight:900
+}
+
+.banner-right p {
+  font-size: clamp(17px,1.4vw , 21px);
+  font-style: "domine", "sans-serif";
+  padding: 0px 4vw;
+  margin-top: 23px;
+}
+
+.banner-right form {
+  margin-top: 23px;
+}
+
+@media (min-width: 922px) {
+  .menu-icon {
+    display: none;
+  }
+  .nav-ul {
+    display: flex;
+  }
+  .banner-right{
+    text-align:left;
+  }
+  .banner-right p{
+    padding: 0px 0px;
+  }
 }

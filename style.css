@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: #23424A;
+    color: white;
+    width: min(50rem , 80%);
+    margin: 0 auto;
+    padding: 4vw;
+}
+
+p {
+    /* font-size: 2vw; */
+    /* font-size: 25px; */
+    font-size: max(25px , 2vw);
+}
