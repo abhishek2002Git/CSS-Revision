@@ -8,6 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  line-height: 1.3;
 }
 
 /***************************************************** Navbar Styling *******************************************************************/
@@ -175,6 +176,131 @@
   padding: 10px 0px;
 }
 
+/*********************************************  trending seciton styling ********************************************************/
+
+.trending-section {
+  text-align: center;
+  padding: 60px 0px;
+}
+
+.trending-text {
+  font-size: 30px;
+  font-weight: 550;
+  font-family: sans-serif;
+  border-bottom: 2px solid black;
+  padding-bottom: 12px;
+}
+
+.trending-articles {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.imgAndText {
+  /* width of .articles img, .img-down-text, .authorAndComments depends on this*/
+  width: clamp(216px, 28.28vw, 373.33px);
+}
+
+.articles img {
+  width: 100%;
+}
+
+.img-down-text {
+  font-size: clamp(20.9px, 1.73vw, 22.95px);
+  width: 100%;
+  margin-top: 12px;
+}
+
+.authorAndComments {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  font-size: 12px;
+  font-family: sans-serif;
+  font-weight: 700;
+  padding: 7px 0;
+}
+
+.browse-more-div {
+  width: 100%;
+  padding: 50px;
+}
+
+.browse-more {
+  margin-top: 50px;
+  font-size: 17px;
+  font-family: sans-serif;
+  border-bottom: 2px solid black;
+}
+
+/********************************************* store section styling ********************************************************/
+
+.store-section {
+  text-align: center;
+}
+
+#store-text {
+  font-size: 30px;
+  font-weight: 550;
+  font-family: sans-serif;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+}
+
+.bookImgAndText {
+  display: flex;
+  margin-top: 50px;
+}
+
+.img-div-book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+}
+
+.img-div-book img {
+  width: max(270px, 26vw);
+}
+
+.store-text {
+  /* background: ; */
+  width: 65%;
+  text-align: left;
+  padding-right: clamp(18px, 15vw, 200px);
+  padding-left: 20px;
+}
+
+#p-1,
+#p-2,
+#p-3 {
+  font-family: sans-serif;
+}
+
+#p-1 {
+  font-size: 32px;
+}
+
+#p-2 {
+  font-size: clamp(20px, 2.27vw, 30px);
+  font-weight: 700;
+  margin-top: 7px;
+}
+
+#p-3 {
+  font-size: clamp(14px, 1.21vw);
+  margin-top: 10px;
+}
 /*********************************************  media queries ********************************************************/
 @media (min-width: 922px) {
   .menu-icon {
@@ -192,8 +318,22 @@
 }
 
 @media (max-width: 768px) {
+  /***********************  I Want To Banner ********************/
   .home-banner {
     display: block;
+  }
+
+  /************************ trending section *********************/
+  .trending-articles {
+    flex-direction: column;
+  }
+  .articles {
+    align-items: center;
+    margin-top: 20px;
+  }
+  .imgAndText,
+  .authorAndComments {
+    width: min(95%, 25rem);
   }
 }
 
@@ -216,5 +356,17 @@
   }
   .right-want-to {
     margin-top: 30px;
+  }
+}
+
+@media (max-width: 865px) {
+  .bookImgAndText {
+    display: block;
+  }
+  .img-div-book, .store-text{
+    width: 100%;
+  }
+  .store-text{
+    padding-right: 20px;
   }
 }
