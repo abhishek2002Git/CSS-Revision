@@ -8,7 +8,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  line-height: 1.3;
+  font-family: sans-serif;
+}
+body {
+  line-height: 1.5;
 }
 
 /***************************************************** Navbar Styling *******************************************************************/
@@ -137,7 +140,6 @@
 .i-want-text {
   font-size: 30px;
   font-weight: 550;
-  font-family: sans-serif;
   border-bottom: 2px solid black;
   padding-bottom: 12px;
 }
@@ -186,7 +188,6 @@
 .trending-text {
   font-size: 30px;
   font-weight: 550;
-  font-family: sans-serif;
   border-bottom: 2px solid black;
   padding-bottom: 12px;
 }
@@ -226,7 +227,6 @@
   border-top: 2px solid black;
   border-bottom: 2px solid black;
   font-size: 12px;
-  font-family: sans-serif;
   font-weight: 700;
   padding: 7px 0;
 }
@@ -239,7 +239,6 @@
 .browse-more {
   margin-top: 50px;
   font-size: 17px;
-  font-family: sans-serif;
   border-bottom: 2px solid black;
 }
 
@@ -247,12 +246,12 @@
 
 .store-section {
   text-align: center;
+  padding: 50px 0px;
 }
 
 #store-text {
   font-size: 30px;
   font-weight: 550;
-  font-family: sans-serif;
   border-bottom: 2px solid black;
   padding-bottom: 5px;
 }
@@ -274,17 +273,10 @@
 }
 
 .store-text {
-  /* background: ; */
   width: 65%;
   text-align: left;
   padding-right: clamp(18px, 15vw, 200px);
   padding-left: 20px;
-}
-
-#p-1,
-#p-2,
-#p-3 {
-  font-family: sans-serif;
 }
 
 #p-1 {
@@ -301,7 +293,124 @@
   font-size: clamp(14px, 1.21vw);
   margin-top: 10px;
 }
+
+.store-span-div {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.store-spans {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 10px 0px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.store-spans:nth-child(2) {
+  margin-left: 15px;
+}
+
+/*********************************************  author section styling ********************************************************/
+
+.author-section {
+  display: flex;
+  padding: 50px 0px;
+}
+
+.left-side-author {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.author-img {
+  width: max(135px, 26.5vw);
+  height: max(190px, 37.34vw);
+}
+
+.right-side-author {
+  width: 50%;
+  text-align: left;
+  padding-right: max(10px, 5vw);
+}
+
+.main-text-author {
+  font-size: max(24px, 2.24vw);
+  font-weight: 550;
+  border-bottom: 2px solid black;
+  padding-bottom: 7px;
+}
+
+.author-text-0 {
+  font-size: 20px;
+  margin-top: 7px;
+  font-weight: 550;
+}
+
+.author-texts,
+.social-links {
+  font-size: max(14px, 1.4vw);
+  margin-top: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 8px 0px;
+}
+
+/*********************************************  footer styling ********************************************************/
+.footer {
+  background: #000000;
+  text-align: left;
+  line-height: 2;
+  padding: 35px 0px;
+}
+
+.footer-img-desktop {
+  width: 100%;
+}
+
+.footer-img-mobile {
+  display: none;
+}
+
+.footer-link-section {
+  list-style: none;
+  display: flex;
+  color: #ffffff;
+  justify-content: space-around;
+  padding: 0px 70px;
+  margin-top: 50px;
+}
+
+.footer-link-section span {
+  font-size: 20px;
+}
+
+.footer-link-section ul {
+  list-style: none;
+  font-size: 14px;
+  font-weight: 550;
+  margin-top: 15px;
+  width: 90%;
+}
+
+.footer-below {
+  background: rgb(237, 237, 237);
+  text-align: center;
+  color: #3a3a3a;
+  font: max(17px, 1.4vw);
+  padding: 20px 0px;
+}
+
 /*********************************************  media queries ********************************************************/
+/***********************  Navbar ********************/
 @media (min-width: 922px) {
   .menu-icon {
     display: none;
@@ -317,8 +426,8 @@
   }
 }
 
+/***********************  I Want To Banner ********************/
 @media (max-width: 768px) {
-  /***********************  I Want To Banner ********************/
   .home-banner {
     display: block;
   }
@@ -359,14 +468,63 @@
   }
 }
 
+/*********** store-section-styling *********************/
 @media (max-width: 865px) {
   .bookImgAndText {
     display: block;
   }
-  .img-div-book, .store-text{
+  .img-div-book,
+  .store-text {
     width: 100%;
   }
-  .store-text{
+  .store-text {
     padding-right: 20px;
+  }
+}
+
+/************** author section styling ******************/
+
+@media (max-width: 543px) {
+  .author-section {
+    display: block;
+  }
+  .left-side-author,
+  .right-side-author {
+    width: 100%;
+  }
+  .right-side-author {
+    padding: 0px 10px;
+    margin-top: 20px;
+  }
+  .author-texts,
+  .social-links {
+    font-size: max(11px, 2.5vw);
+  }
+}
+
+/*************** footer styling *********************/
+
+@media (max-width: 921px) {
+  .footer-link-section {
+    display: block;
+    text-align: center;
+  }
+  .footer-link-section ul {
+    width: 100%;
+    margin-top: 5px;
+  }
+  .footer-link-section div {
+    margin: 35px;
+  }
+}
+
+@media (max-width: 489px) {
+  .footer-img-desktop {
+    display: none;
+  }
+  .footer-img-mobile {
+    display: block;
+    /* width: ; */
+    width: 100%;
   }
 }
